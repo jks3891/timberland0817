@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장광석의 팀버랜드 모작</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 테일윈드 불러오기 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- 스와이퍼 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 공통 js 연결 -->
+    <script defer src="script/script.js"></script>
+
+    <!-- 공통 css 연결 -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!-- 탑바 구현 시작 -->
+    <header class="top-bar">
+      <!-- 검색창 구현 시작 -->
+      <div class="search-wrap">
+        <div class="search__btn">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <div class="search__ctn mx-auto">
+          <div class="search__bar">
+            <input type="text" placeholder="검색어를 입력해주세요." />
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="search__prod flex w-full">
+            <div class="prod-left w-[50%] pr-[62px] pb-[13px]">
+              <div class="prod-left__top mt-[20px]">
+                <h1 class="text-[18px] font-bold">최근 검색어</h1>
+                <p class="text-[16px] mt-[26px] mb-[40px] text-[#9e9e9e]">
+                  최근 검색어가 없습니다.
+                </p>
+              </div>
+              <div class="prod-left__bottom">
+                <p class="text-[18px] font-bold mb-[16px]">인기검색어</p>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="#">워커부츠</a>
+                    </li>
+                    <li>
+                      <a href="#">6인치</a>
+                    </li>
+                    <li>
+                      <a href="#">보트슈즈</a>
+                    </li>
+                    <li>
+                      <a href="#">반팔티</a>
+                    </li>
+                    <li>
+                      <a href="#">쇼츠</a>
+                    </li>
+                    <li>
+                      <a href="#">샌들</a>
+                    </li>
+                    <li>
+                      <a href="#">백팩</a>
+                    </li>
+                    <li>
+                      <a href="#">스톤 스트릿</a>
+                    </li>
+                    <li>
+                      <a href="#">하이커</a>
+                    </li>
+                    <li>
+                      <a href="#">모션6</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="prod-right w-[50%] pb-[13px]">
+              <p class="text-[18px] font-bold mt-[20px]">추천 상품</p>
+              <div class="prod__list">
+                <div class="prod__list-1 my-[8px] flex">
+                  <div class="prod__img-box relative inline-block">
+                    <img
+                      class="prod__img-default"
+                      src="https://image.timberland.co.kr/cmsstatic/product/TB0100617131_TB0100617131_primary.jpg?browse"
+                      alt=""
+                    />
+                    <img
+                      class="prod__img-hover"
+                      src="https://image.timberland.co.kr/cmsstatic/product/TB0100617131_TB0100617131_hover.jpg?browse"
+                      alt=""
+                    />
+                  </div>
+                  <div class="list-name">
+                    <a href="#" class="flex mb-[20px]"
+                      >[10061] 남성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                    >
+                    <p class="font-bold">268,000 원</p>
+                  </div>
+                </div>
+                <div class="prod__list-2 my-[8px] flex">
+                  <div class="prod__img-box relative inline-block">
+                    <img
+                      class="prod__img-default"
+                      src="https://image.timberland.co.kr/cmsstatic/product/49/TB0155512101_TB0155512101_primary_new.jpg?browse"
+                      alt=""
+                    />
+                    <img
+                      class="prod__img-hover"
+                      src="https://image.timberland.co.kr/cmsstatic/product/49/TB0155512101_TB0155512101_hover_new.jpg?browse"
+                      alt=""
+                    />
+                  </div>
+                  <div class="list-name">
+                    <a href="#" class="flex mb-[20px]"
+                      >[15551] 남성 얼스키퍼 오리지널 가죽 워터프루프
+                      워커부츠</a
+                    >
+                    <p class="font-bold">268,000 원</p>
+                  </div>
+                </div>
+                <div class="prod__list-3 my-[8px] flex">
+                  <div class="prod__img-box relative inline-block">
+                    <img
+                      class="prod__img-default"
+                      src="https://image.timberland.co.kr/cmsstatic/product/TB0103617131_TB0103617131_primary.jpg?browse"
+                      alt=""
+                    />
+                    <img
+                      class="prod__img-hover"
+                      src="https://image.timberland.co.kr/cmsstatic/product/TB0103617131_TB0103617131_hover.jpg?browse"
+                      alt=""
+                    />
+                  </div>
+                  <div class="list-name">
+                    <a href="#" class="flex mb-[20px]"
+                      >[10361] 여성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                    >
+                    <p class="font-bold">268,000 원</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 검색창 구현 끝 -->
+      <div class="con mx-auto">
+        <div class="top-bar__login-bar">
+          <ul class="flex">
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-circle-right"></i>
+                <span> LOGIN </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-circle-user"></i>
+                <span> JOIN </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span> FIND A STORE </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-regular fa-circle-question"></i>
+                <span> HELP </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span> CART (0) </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="top-bar__menu-box flex pt-[3px]">
+          <div class="logo-box flex">
+            <a href="#">
+              <img
+                src="https://www.timberland.co.kr/cmsstatic/theme/1/TBL%20Logo%20white.png"
+                alt="팀버랜드 로고"
+              />
+            </a>
+          </div>
+          <div class="top-bar__menu flex w-full">
+            <nav class="menu__ctn-1 flex">
+              <ul class="flex h-[61px]">
+                <li>
+                  <a href="#">
+                    <span>ICON</span>
+                  </a>
+                  <div class="menu__ctn-2-wrap">
+                    <div class="menu__ctn-2 con mx-auto">
+                      <ul class="flex">
+                        <li>
+                          <a href="#">
+                            <span>6인치 부츠</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>보트슈즈</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="ctn-2__rigtht-ctn">
+                        <a href="#">
+                          <img
+                            src="https://image.timberland.co.kr/cmsstatic/menu/10806/icon_gnb_banner.jpg"
+                            alt="6인치 옐로우 부츠"
+                          />
+                          <p>Men's 6-inch Premium Yellow Boots</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>NEW</span>
+                  </a>
+                  <div class="menu__ctn-2-wrap">
+                    <div class="menu__ctn-2 con mx-auto">
+                      <ul class="flex">
+                        <li>
+                          <a href="#">
+                            <span>NEW</span>
+                          </a>
+                          <ul>
+                            <li><a href="#">남성 신발 신상품</a></li>
+                            <li><a href="#">여성 신발 신상품</a></li>
+                            <li><a href="#">여성 신발 신상품</a></li>
+                            <li><a href="#">액세서리 신상품</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>COLLECTION</span>
+                          </a>
+                          <ul>
+                            <li><a href="#">THIS IS OUR OUTDOORS</a></li>
+                            <li><a href="#">보트슈즈</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="ctn-2__rigtht-ctn">
+                        <a href="#">
+                          <img
+                            src="https://image.timberland.co.kr/cmsstatic/menu/11302/new_gnb_banner.jpg"
+                            alt="클래식 로퍼"
+                          />
+                          <p>Men's Classics 3 Eye Boatshoes</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>MEN</span>
+                  </a>
+                  <div class="menu__ctn-2-wrap">
+                    <div class="menu__ctn-2 con mx-auto">
+                      <ul class="flex">
+                        <li>
+                          <a href="#">
+                            <span>남성 신발 전체보기</span>
+                          </a>
+                          <ul>
+                            <li><a href="#">부츠&추카</a></li>
+                            <li><a href="#">하이커&아웃도어</a></li>
+                            <li><a href="#">스니커즈</a></li>
+                            <li><a href="#">옥스퍼드&보트슈즈</a></li>
+                            <li><a href="#">샌들&슬라이드</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>남성 의류 전체보기</span>
+                          </a>
+                          <ul>
+                            <li><a href="#">남성 아우터</a></li>
+                            <li><a href="#">남성 티셔츠&맨투맨&후드</a></li>
+                            <li><a href="#">남성 팬츠</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="ctn-2__rigtht-ctn">
+                        <a href="#">
+                          <img
+                            src="https://image.timberland.co.kr/cmsstatic/menu/10859/men_gnb_banner.jpg"
+                            alt="남자 스니커즈"
+                          />
+                          <p>Men's Motion Access Sneakers</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>WOMEN</span>
+                  </a>
+                  <div class="menu__ctn-2-wrap">
+                    <div class="menu__ctn-2 con mx-auto">
+                      <ul class="flex">
+                        <li>
+                          <a href="#">
+                            <span>여성 신발 전체보기</span>
+                          </a>
+                          <ul>
+                            <li><a href="#">부츠&추카</a></li>
+                            <li><a href="#">하이커&아웃도어</a></li>
+                            <li><a href="#">스니커즈</a></li>
+                            <li><a href="#">옥스퍼드&보트슈즈</a></li>
+                            <li><a href="#">샌들&슬라이드</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="ctn-2__rigtht-ctn">
+                        <a href="#">
+                          <img
+                            src="https://image.timberland.co.kr/cmsstatic/menu/10890/women_gnb_banner.jpg"
+                            alt="여성 스니커즈"
+                          />
+                          <p>Women's Motion Access Sneakers</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>KIDS</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>ACC</span>
+                  </a>
+                  <div class="menu__ctn-2-wrap">
+                    <div class="menu__ctn-2 con mx-auto">
+                      <ul class="flex">
+                        <li>
+                          <a href="#">
+                            <span>가방</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>모자</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>양말</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>PRODUCT CARE</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>SALE</span>
+                  </a>
+                  <div class="menu__ctn-2-wrap">
+                    <div class="menu__ctn-2 con mx-auto">
+                      <ul class="flex">
+                        <li>
+                          <a href="#">
+                            <span>신발 SALE</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>의류 SALE</span>
+                          </a>
+                          <ul>
+                            <li><a href="#">아우터 SALE</a></li>
+                            <li><a href="#">맨투맨/티셔츠 SALE</a></li>
+                            <li><a href="#">팬츠 SALE</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>액세서리 SALE</span>
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="ctn-2__rigtht-ctn">
+                        <a href="#">
+                          <img
+                            src="https://image.timberland.co.kr/cmsstatic/menu/10892/Specialsale_gnb_banner.gif"
+                            alt="50% 세일"
+                          />
+                          <p>50% SPECIAL SALE</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>온라인 단독</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="menu__search-box flex">
+              <span> SEARCH </span>
+              <span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 탑바 구현 끝 -->
+
+    <!-- 팝업 구현 시작 -->
+    <div class="popup-wrap">
+      <div class="popup-swiper con mx-auto h-full">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">2024 여름 시즌 오프 세일</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">신규회원 2만원 웰컴쿠폰 증정</a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">온라인에서만 만날 수 있는 단독 스타일</a>
+            </div>
+          </div>
+
+          <div class="popup__close">
+            <a href="#">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </div>
+
+          <div class="swiper-button-group">
+            <div class="swiper-button swiper-button-prev">
+              <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="swiper-button swiper-button-next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 팝업 구현 끝 -->
+
+    <!-- 메인 섹션 스와이퍼 구현 시작 -->
+    <section class="section-swiper-box">
+      <div class="swiper relative cursor-pointer">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://image.timberland.co.kr/cmsstatic/Summer_season_off_mainslide_pc.jpg"
+              alt="summer season off 스와이퍼 이미지"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://image.timberland.co.kr/cmsstatic/HP%20Banner_KR%201920x620.png"
+              alt="this is our outdoors 스와이퍼 이미지"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://image.timberland.co.kr/cmsstatic/TOYB_mainslide_pc.jpg"
+              alt="the original yellow boot 스와이퍼 이미지"
+            />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-group">
+          <div class="swiper-button swiper-button-prev">
+            <img
+              src="data:image/svg+xml,%3Csvg width='43' height='84' viewBox='0 0 43 84' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 42L1.4 43.4L43 1.8L41.6 0.4L0 42Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 42L1.4 40.6L43 82.2L41.6 83.6L0 42Z' fill='white'/%3E%3C/svg%3E%0A"
+              alt="prev arrow"
+            />
+          </div>
+          <div class="swiper-button swiper-button-next">
+            <img
+              src="data:image/svg+xml,%3Csvg width='43' height='84' viewBox='0 0 43 84' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.4 0.5L0 1.9L41.6 43.5L43 42.1L1.4 0.5Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.4 83.7L0 82.3L41.6 40.7L43 42.1L1.4 83.7Z' fill='white'/%3E%3C/svg%3E%0A"
+              alt="next arrow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 메인 섹션 스와이퍼 구현 끝 -->
+
+    <!-- 베너 컨텐츠1 구현 시작 -->
+    <div class="banner-content-wrap con mx-auto">
+      <div class="banner-content__menu">
+        <ul class="flex">
+          <li>
+            <a href="#">
+              <span>ICON</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>new collection</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>men's boots</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>WOMEN'S BOOTS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>KIDS'S BOOTS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>SALE</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="banner-content__img1">
+        <a href="#">
+          <img
+            src="https://www.timberland.co.kr/cmsstatic/structured-content/16016/FIND_YOUR_OUTDOORS_Corner_1_pc.jpg"
+            alt="아웃도어 이미지"
+          />
+        </a>
+      </div>
+      <div
+        class="banner-content__text-wrap banner-content__text-wrap1 mt-[60px] mb-[100px] text-center"
+      >
+        <h1 class="text__title">FIND YOUR OUTDOORS</h1>
+        <p class="text__sub">팀버랜드만의 Outdoors 컬렉션을 확인하세요.</p>
+        <div class="button-wrap mx-auto">
+          <a href="#">제품 전체보기</a>
+        </div>
+      </div>
+      <div class="banner-content__img2">
+        <a href="#">
+          <img
+            src="https://www.timberland.co.kr/cmsstatic/structured-content/16017/6Inch_Boots_Corner_2_pc.jpg"
+            alt="남 여 이미지"
+          />
+        </a>
+      </div>
+      <div
+        class="banner-content__text-wrap banner-content__text-wrap2 mt-[60px] mb-[100px] text-center"
+      >
+        <h1 class="text__title">프리미엄 6인치 부츠</h1>
+        <p class="text__sub">
+          프리미엄 6인치 옐로 부츠를 신고 감각적인 스타일을 완성해 보세요.
+        </p>
+        <div class="button-wrap button-wrap2 mx-auto mr-[10px]">
+          <a href="#">남성부츠</a>
+        </div>
+        <div class="button-wrap button-wrap2 mx-auto">
+          <a href="#">여성부츠</a>
+        </div>
+      </div>
+    </div>
+    <!-- 베너 컨텐츠1 구현 끝 -->
+
+    <!-- 제품 스와이퍼1 구현 시작 -->
+    <div class="product-swiper-wrap product-swiper-wrap1 con mx-auto">
+      <div class="product__text">
+        <h1 class="product__title">ICON</h1>
+        <a href="#" class="product__sub">
+          <i class="fa-solid fa-arrow-right mr-[5px]"></i>
+          제품 전체 보기
+        </a>
+      </div>
+      <div class="product__slide">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-1">
+              <img
+                class="default-img"
+                src="https://image.timberland.co.kr/cmsstatic/product/TB1100617131_TB1100617131_primary.jpg?browse"
+                alt=""
+              />
+              <img
+                class="hover-img"
+                src="https://image.timberland.co.kr/cmsstatic/product/TB1100617131_TB1100617131_hover.jpg?browse"
+                alt=""
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10061] 남성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-2">
+              <img
+                class="default-img"
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0103617131_TB0103617131_primary.jpg?browse"
+                alt=""
+              />
+              <img
+                class="hover-img"
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0103617131_TB0103617131_hover.jpg?browse"
+                alt=""
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10361] 여성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-3">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/10807/TB0A17KY0011_TB0A17KY0011_primary.png?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/10807/TB0A17KY0011_TB0A17KY0011_hover.png?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 워터프루프 필드 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price">218,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-4">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/10810/TB0A18A6D471_TB0A18A6D471_primary.png?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/10810/TB0A18A6D471_TB0A18A6D471_hover.png?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 워터프루프 필드 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price">218,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-5">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A18RI2311_TB0A18RI2311_primary.png?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A18RI2311_TB0A18RI2311_hover.png?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 워터프루프 필드 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price">218,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-6">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/49/TB0155512101_TB0155512101_primary_new.jpg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/49/TB0155512101_TB0155512101_hover_new.jpg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[15551] 남성 얼스키퍼 오리지널 가죽 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-7">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0500096481_TB0500096481_primary.jpg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0500096481_TB0500096481_hover.jpg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[50009] 남성 클래식 3아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price">218,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-8">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0513042141_TB0513042141_primary.jpeg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0513042141_TB0513042141_hover.jpeg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[51304] 여성 클래식 3아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price">218,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-9">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0300032141_TB0300032141_primary.jpg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0300032141_TB0300032141_hover.jpg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[30003] 남성 클래식 3아이 보트슈즈츠</a>
+                </p>
+                <p class="swiper-slide-price">218,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-10">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/53/TB0723332141_TB0723332141_primary-1.jpg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/53/TB0723332141_TB0723332141_02.jpg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[72333] 여성 클래식 2아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price">198,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-11">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0230612311_TB0230612311_primary.jpeg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0230612311_TB0230612311_hover.jpeg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[23061] 남성 프리미엄 추카 워터프루프 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price">238,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-12">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0100730011_TB0100730011_primary.jpeg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0100730011_TB0100730011_hover.jpeg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10073] 남성 6인치 프리미엄 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-13">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0233997131_TB0233997131_primary.jpeg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0233997131_TB0233997131_hover.jpeg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[23399] 여성 넬리 프리미엄 추카 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">238,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-14">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0233980011_TB0233980011_primary.jpg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0233980011_TB0233980011_hover.jpg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[23398] 여성 넬리 프리미엄 추카 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">238,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-15">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB08658A0011_TB08658A0011_primary.jpg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB08658A0011_TB08658A0011_hover.jpg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[8658A] 여성 6인치 프리미엄 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-16">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0250772141_TB0250772141_primary.jpeg?browse"
+                alt=""
+              />
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0250772141_TB0250772141_hover.jpeg?browse"
+                alt=""
+                class="hover-img"
+              />
+              <div class="swiper-slide-btn">
+                <a href="#">QUICKVIEW</a>
+              </div>
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[25077] 남성 클래식 2아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price">198,000 원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__swiper-button-group">
+          <div class="product__swiper-button-prev swiper-button-prev">
+            <div>
+              <i class="fa-solid fa-chevron-left" style="color: #fff"></i>
+            </div>
+          </div>
+          <div class="product__swiper-button-next swiper-button-next">
+            <div>
+              <i class="fa-solid fa-chevron-right" style="color: #fff"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 제품 스와이퍼1 구현 끝 -->
+
+    <!-- 제품 스와이퍼2 구현 시작 -->
+    <div class="product-swiper-wrap product-swiper-wrap2 con mx-auto">
+      <div class="product__text product__text2">
+        <h1 class="product__title">JUST FOR YOU</h1>
+      </div>
+      <div class="product__slide2">
+        <div class="swiper swiper2">
+          <div class="swiper-wrapper swiper-wrapper2">
+            <div class="swiper-slide swiper-slide-1">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB1100617131_TB1100617131_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10061] 남성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-2">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0100617131_TB0100617131_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10061] 남성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-3">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0103617131_TB0103617131_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10361] 여성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-4">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB18168R2311_TB18168R2311_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">여성 6인치 워터빌 워터프루프 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+                <p class="swiper-slide-price2">187,600원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-5">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0300032141_TB0300032141_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[30003] 남성 클래식 3아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price2">218,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-6">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0100730011_TB0100730011_primary.jpeg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10073] 남성 6인치 프리미엄 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-7">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB1A1P3L2311_TB1A1P3L2311_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 클래식 워터프루프 추카</a>
+                </p>
+                <p class="swiper-slide-price2">198,000원</p>
+                <p class="swiper-slide-price2">138,600원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-8">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0500096481_TB0500096481_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[50009] 남성 클래식 3아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price2">218,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-9">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB1230612311_TB1230612311_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[23061] 남성 프리미엄 추카 워터프루프 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price2">238,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-10">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/27506/TB1A5MJ80151_TB1A5MJ80151_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 Crestfield 워터프루프 옥스퍼드</a>
+                </p>
+                <p class="swiper-slide-price2">228,000원</p>
+                <p class="swiper-slide-price2">159,600원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-11">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0250772141_TB0250772141_primary.jpeg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">[25077] 남성 클래식 2아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price2">198,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-12">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A2JU5W021_TB0A2JU5W021_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 헤리티지 워터프루프 추카</a>
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-13">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A695W0731_TB0A695W0731_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">워터-리팰런트 풀집업 자켓</a>
+                </p>
+                <p class="swiper-slide-price2">248,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-14">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0100012141_TB0100012141_primary.jpeg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10001] 남성 6인치 프리미엄 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-15">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/27507/TB1A5V11F131_TB1A5V11F131_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#"
+                    >[10061] 남성 6인치 프리미엄 옐로 워터프루프 워커부츠</a
+                  >
+                </p>
+                <p class="swiper-slide-price2">268,000 원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-16">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/27509/TB172066EBL1_TB172066EBL1_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 6인치 프리미엄 워터프루프 워커부츠</a>
+                </p>
+                <p class="swiper-slide-price2">268,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-17">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A232XF741_TB0A232XF741_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">남성 브라운 2아이 보트슈즈</a>
+                </p>
+                <p class="swiper-slide-price2">198,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-18">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A68WU3021_TB0A68WU3021_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">우븐 오버 셔츠</a>
+                </p>
+                <p class="swiper-slide-price2">148,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-19">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A69CUH871_TB0A69CUH871_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">트러커 데님 자켓</a>
+                </p>
+                <p class="swiper-slide-price2">268,000원</p>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-20">
+              <img
+                src="https://image.timberland.co.kr/cmsstatic/product/TB0A68WU0011_TB0A68WU0011_primary.jpg"
+                alt=""
+              />
+              <div class="swiper-slide__text">
+                <p class="swiper-slide__name">
+                  <a href="#">우븐 오버 셔츠</a>
+                </p>
+                <p class="swiper-slide-price2">148,000원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__swiper-button-group2">
+          <div class="product__swiper-button-prev2 swiper-button-prev">
+            <div>
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
+          </div>
+          <div class="product__swiper-button-next2 swiper-button-next">
+            <div>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 제품 스와이퍼2 구현 끝 -->
+
+    <!-- 베너 컨텐츠2 구현 시작 -->
+    <div class="banner-content-wrap con mx-auto mt-[150px]">
+      <div class="banner-content__img1">
+        <a href="#">
+          <img
+            src="https://www.timberland.co.kr/cmsstatic/structured-content/15867/July_corner_3_pc.jpg"
+            alt="남성, 신발 이미지"
+          />
+        </a>
+      </div>
+      <div
+        class="banner-content__text-wrap banner-content__text-wrap1 mt-[60px] mb-[100px] text-center"
+      >
+        <h1 class="text__title">여름을 준비하는 자세</h1>
+        <p class="text__sub">
+          소프트한 텍스쳐로 사계절 신기 좋은 슈즈로 여름을 준비해 보세요.
+        </p>
+        <div class="button-wrap button-wrap2 mx-auto mr-[10px]">
+          <a href="#">남성슈즈</a>
+        </div>
+        <div class="button-wrap button-wrap2 mx-auto">
+          <a href="#">여성슈즈</a>
+        </div>
+      </div>
+      <div class="banner-content__img2">
+        <a href="#">
+          <img
+            src="https://www.timberland.co.kr/cmsstatic/structured-content/15868/July_corner_4_pc.jpg"
+            alt="남성 보트 이미지"
+          />
+        </a>
+      </div>
+      <div
+        class="banner-content__text-wrap banner-content__text-wrap2 mt-[60px] mb-[100px] text-center"
+      >
+        <h1 class="text__title">썸머 에센셜 아이템</h1>
+        <p class="text__sub">
+          시원한 착용감에 스타일을 더한 썸머 아이템을 만나보세요.
+        </p>
+        <div class="button-wrap button-wrap2 mx-auto mr-[10px]">
+          <a href="#">반팔티</a>
+        </div>
+        <div class="button-wrap button-wrap2 mx-auto">
+          <a href="#">반바지</a>
+        </div>
+      </div>
+    </div>
+    <!-- 베너 컨텐츠2 메뉴 구현 끝 -->
+
+    <!-- 베너 컨텐츠3 구현 시작 -->
+    <!-- 베너 컨텐츠3 상단 -->
+    <div class="banner-ctn3-top con mx-auto flex">
+      <div class="left-cnt">
+        <div class="bg-img bg-img1">
+          <img
+            src="https://image.timberland.co.kr/cmsstatic/structured-content/15870/July_corner_icon_01_pc.jpg?browse"
+            alt="6인치 부츠 두짝"
+          />
+          <div class="ctn-text">
+            <p class="mb-[14px]">Premium 6 inch</p>
+            <h1>YELLOW</h1>
+            <h1 class="mt-[-30px]">BOOTS</h1>
+            <a href="#">
+              <i class="fa-solid fa-arrow-right-long"></i>
+              <span class="ml-[5px]">FOR MEN</span>
+            </a>
+            <br />
+            <a href="#">
+              <i class="fa-solid fa-arrow-right-long"></i>
+              <span class="ml-[5px]">FOR WOMEN</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right-cnt">
+        <div class="bg-img bg-img2">
+          <img
+            src="https://image.timberland.co.kr/cmsstatic/structured-content/15871/July_corner_icon_02_pc.jpg?browse"
+            alt="보트 슈즈 두짝"
+          />
+          <div class="ctn-text">
+            <p class="mb-[14px]">3-Eye classic</p>
+            <h1>BOAT</h1>
+            <h1 class="mt-[-30px]">SHOES</h1>
+            <a href="#">
+              <i class="fa-solid fa-arrow-right-long"></i>
+              <span class="ml-[5px]">FOR MEN</span>
+            </a>
+            <br />
+            <a href="#">
+              <i class="fa-solid fa-arrow-right-long"></i>
+              <span class="ml-[5px]">FOR WOMEN</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 베너 컨텐츠 하단 -->
+    <div class="banner-ctn3-bottom con mx-auto mt-[100px]">
+      <div class="ctn-bottom__bg-img">
+        <img
+          src="https://image.timberland.co.kr/cmsstatic/structured-content/13562/coner_15_02.jpg?browse"
+          alt="8칸 사람 이미지"
+        />
+        <div class="ctn-bottom__text">
+          <h1>팀버랜드</h1>
+          <h1 class="mt-[-30px]">신규가입 혜택</h1>
+          <p>공식 온라인몰 신규 회원 가입 시,</p>
+          <p class="mt-[-15px]">즉시 사용 가능한 2만원 쿠폰 증정</p>
+          <a href="#">
+            <i class="fa-solid fa-arrow-right-long"></i>
+            <span class="ml-[5px]">신규 회원가입</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 베너 컨텐츠3 구현 끝 -->
+
+    <!-- 푸터 구현 시작 -->
+    <footer class="footer-wrap mt-[60px]">
+      <div class="footer__menu-bar bg-[#362d2e] h-[400px]">
+        <div class="con mx-auto">
+          <div class="menu-bar__top w-full">
+            <ul class="flex">
+              <li>
+                <a href="#" class="menu-bar__txt">
+                  <h3>ABOUT</h3>
+                  <span>ABOUT US</span>
+                  <br />
+                  <span>RESPONSIBILITY</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menu-bar__txt">
+                  <h3>CUSTOMER</h3>
+                  <span>CONTACT US</span>
+                  <br />
+                  <span>FAQ</span>
+                  <br />
+                  <span>
+                    문의접수
+                    <br />
+                    Catherine_Kim@vfc.com
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menu-bar__txt">
+                  <h3>MY ACCOUNT</h3>
+                  <span>LOG IN</span>
+                  <br />
+                  <span>회원가입</span>
+                  <br />
+                  <span>주문/배송조회</span>
+                  <br />
+                  <span>WISH LIST</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="menu-bar__txt">
+                  <h3>POLICES</h3>
+                  <span>이용약관</span>
+                  <br />
+                  <span>TRADEMARKS</span>
+                  <br />
+                  <span>개인정보처리방침</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-bar__bottom w-full flex">
+            <div class="menu-bar__ctn menu-bar__ctn1">
+              <span>FIND A STORE</span>
+              <a class="mx-auto" href="#">STORE LOCATOR</a>
+            </div>
+            <div class="menu-bar__ctn menu-bar__ctn2">
+              <span>FOLLOW TIMBERLAND</span>
+              <div class="icon-box flex">
+                <a href="#">
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-regular fa-square-caret-right"></i>
+                </a>
+                <a href="#"> blog </a>
+              </div>
+            </div>
+            <div class="menu-bar__ctn menu-bar__ctn3">
+              <span>CUSTOMER CENTER</span>
+              <p>1522-4010</p>
+              <p>월~금요일 09:00 ~ 18:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-bar bg-[#282321] h-[210px] flex">
+        <div class="con mx-auto flex self-center w-full">
+          <div class="bottom-left-ctn w-[75%] pl-[20px]">
+            <ul class="flex">
+              <li>유한책임회사 브이에프코리아</li>
+              <li>대표이사 SANUSI SYLVANI</li>
+              <li>개인정보관리책임자 김지원</li>
+              <li>사업자 등록번호: 220-88-43561</li>
+            </ul>
+            <div>
+              <span>통신판매업 신고: 2013-서울강남-02918 호</span>
+              <a href="#" class="text-white font-bold ml-[10px]">
+                사업자정보확인</a
+              >
+            </div>
+            <div>
+              <span>주소 : 서울특별시 강남구 테헤란로 317 동훈타워 18층</span>
+            </div>
+            <div>
+              <a href="#" class="text-white"
+                >고객센터(평일 09:00 ~ 18:00) 1522-4010</a
+              >
+            </div>
+            <div class="mt-[20px]">
+              <span>ⓒ2017 TBL Licensing LLC. All Rights Reserved.</span>
+            </div>
+          </div>
+          <div class="bottom-right-ctn w-[25%] pl-[20px]">
+            <strong class="text-[#eb8102]"
+              >(주)이니시스의 에스크로 서비스 가입</strong
+            >
+            <p>팀버랜드 한국 공식 온라인 스토어에서는 고객님의</p>
+            <p>안전한 거래를 위해 실시간 계좌이체 거래에 대해</p>
+            <p>구매안전서비스를 적용하고 있습니다.</p>
+            <a href="#" class="flex mt-[20px] text-white"
+              >이니시스 구매안전 서비스 가입확인</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- 푸터 구현 끝 -->
+  </body>
+</html>

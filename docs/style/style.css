@@ -1,0 +1,955 @@
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-kr-<uniquifier > {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+html > body {
+  font-family: "Noto Sans KR", sans-serif;
+  text-underline-position: under;
+}
+
+/* 라이브러리 */
+.con {
+  max-width: var(--site-width);
+}
+
+/* 커스텀 */
+:root {
+  --site-width: 1460px;
+}
+
+/* 검색창 구현 시작 */
+.search-wrap {
+  position: relative;
+  max-width: 100vw;
+  height: 530px;
+  background-color: white;
+  z-index: 30;
+  display: none;
+}
+
+.search-wrap.active {
+  display: block;
+}
+
+.search__btn {
+  position: absolute;
+  right: 3%;
+  top: 4%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.search__btn:hover {
+  opacity: 0.5;
+}
+
+.search__ctn {
+  max-width: 840px;
+  background-color: white;
+  height: 100%;
+}
+
+.search__bar {
+  position: relative;
+  padding-top: 80px;
+}
+
+.search__bar > input {
+  padding: 15px 0 10px 0;
+  border-bottom: 2px solid black;
+  font-size: 24px;
+  width: 100%;
+  outline: none;
+}
+
+.search__bar button {
+  position: absolute;
+  top: 71%;
+  right: 0;
+  font-size: 24px;
+}
+
+.prod-left__bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.prod-left__bottom li {
+  margin-right: 5px;
+  padding: 8px 0;
+}
+
+.prod-left__bottom li > a {
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  padding: 8px 16px;
+  color: #141414;
+  font-size: 14px;
+}
+
+.prod-left__bottom li > a:hover {
+  background-color: black;
+  color: white;
+}
+
+.prod__list img {
+  width: 68px;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.prod__list .prod__img-box:hover .prod__img-hover {
+  opacity: 1;
+}
+
+.prod__list .prod__img-boxa:hover .prod__img-default {
+  opacity: 0;
+}
+
+.prod__img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.prod__list .list-name {
+  font-size: 14px;
+  margin-left: 20px;
+  padding-top: 6px;
+}
+
+.prod__list .list-name a:hover {
+  color: #e78f21;
+}
+/* 검색창 구현 끝 */
+
+/* 탑바 구현 시작 */
+body {
+  position: relative;
+}
+
+.top-bar {
+  background-color: #282321;
+  height: 116px;
+}
+
+.top-bar > .con {
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.top-bar__login-bar {
+  margin-bottom: 18px;
+}
+
+.top-bar__login-bar > ul {
+  justify-content: flex-end;
+}
+
+.top-bar__login-bar > ul > li {
+  margin-left: 22px;
+}
+
+.top-bar__login-bar > ul > li > a {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+
+.top-bar__login-bar > ul li > a > i {
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+.top-bar__menu-box > .logo-box > a > img {
+  min-width: 226px;
+  max-width: 226px;
+}
+
+.top-bar__menu > .menu__ctn-1 {
+  padding-left: 40px;
+}
+
+.top-bar__menu > .menu__ctn-1 > ul > li > a {
+  display: flex;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar__menu > .menu__ctn-1 > ul > li:hover > a {
+  background-color: white;
+  color: #282321;
+}
+
+.menu__ctn-2-wrap {
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 100vw;
+  background-color: white;
+  z-index: 10;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  height: 100%;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul {
+  margin-left: 330px;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul > li {
+  margin-right: 72px;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul li > a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul ul {
+  margin-top: 13px;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul ul li {
+  margin-bottom: 3px;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul ul li > a {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > ul ul li:hover > a {
+  color: #eb8102;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > .ctn-2__rigtht-ctn > a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > .ctn-2__rigtht-ctn:hover > a {
+  color: #eb8102;
+}
+
+.menu__ctn-2-wrap .menu__ctn-2 > .ctn-2__rigtht-ctn > a > p {
+  margin-top: 10px;
+}
+
+.menu__ctn-1 > ul > li:hover > .menu__ctn-2-wrap {
+  display: block;
+}
+
+.menu__search-box {
+  border: 1px solid #7f7b78;
+  width: 200px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-left: auto;
+}
+
+.menu__search-box span {
+  color: white;
+  font-weight: bold;
+}
+/* 탑바 구현 끝 */
+
+/* 팝업 구현 시작 */
+.popup-wrap {
+  background-color: white;
+  width: 100vw;
+  height: 50px;
+}
+
+.popup-wrap.active {
+  display: none;
+}
+
+.popup-wrap .popup-swiper {
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.popup-wrap .swiper-slide {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup-wrap .swiper-slide > a:hover {
+  color: #e78f21;
+}
+
+.swiper-button-group {
+  position: absolute;
+  width: 100%;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button {
+  color: black !important;
+}
+
+.swiper-button:hover {
+  color: #e78f21 !important;
+}
+
+.swiper-button-group .swiper-button-prev {
+  left: 3%;
+}
+
+.swiper-button-group .swiper-button-next {
+  right: 3%;
+}
+
+.popup-wrap .swiper-button::after {
+  content: "";
+}
+
+.popup__close {
+  position: absolute;
+  top: -1px;
+  font-size: 20px;
+  right: 5.5%;
+  z-index: 10;
+}
+
+.popup__close:hover {
+  color: #e78f21;
+}
+
+.popup__close .popup-wrap {
+  display: none;
+}
+/* 팝업 구현 끝 */
+
+/* 메인 섹션 스와이퍼 구현 시작 */
+.section-swiper-box .swiper:hover .swiper-button {
+  display: block;
+}
+
+.section-swiper-box .swiper-button-group {
+  position: absolute;
+  z-index: 10;
+  top: 54%;
+  width: 100%;
+}
+
+.section-swiper-box .swiper-button-group > .swiper-button {
+  width: 50px;
+  display: none;
+}
+
+.section-swiper-box .swiper-button-group > .swiper-button::after {
+  content: "";
+}
+
+.section-swiper-box .swiper-button-group > .swiper-button-prev {
+  left: 38px;
+}
+
+.section-swiper-box .swiper-button-group > .swiper-button-next {
+  right: 38px;
+}
+
+.section-swiper-box .swiper-pagination {
+  .swiper-pagination-bullet {
+    background-color: white;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    &.swiper-pagination-bullet-active {
+      width: 32px;
+      border-radius: 25px;
+      opacity: 1;
+    }
+  }
+}
+/* 메인 섹션 스와이퍼 구현 끝 */
+
+/* 베너 컨텐츠1 구현 시작 */
+.banner-content__menu {
+  margin: 70px 0 60px;
+}
+
+.banner-content__menu > ul {
+  justify-content: center;
+}
+
+.banner-content__menu > ul > li {
+  padding: 0 30px;
+  border-right: 1px solid #eb8102;
+}
+
+.banner-content__menu > ul > li:hover > a {
+  color: #eb8102;
+}
+
+.banner-content__menu > ul > li:last-child {
+  border-right: none;
+}
+
+.banner-content__menu > ul > li > a {
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.banner-content__text-wrap > h1 {
+  font-size: 46px;
+  font-weight: 900;
+  padding-bottom: 24px;
+}
+
+.banner-content__text-wrap > p {
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 43px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.button-wrap:hover {
+  background-color: white;
+  color: black;
+}
+
+.button-wrap2 {
+  display: inline-block;
+}
+
+.button-wrap2 > a {
+  display: block;
+  margin-top: 9px;
+}
+/* 베너 컨텐츠1 구현 끝 */
+
+/* 제품 스와이퍼1 구현 시작 */
+.product-swiper-wrap1 .product__text {
+  margin: 40px 0;
+}
+
+.product-swiper-wrap1 .product__text > h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.product-swiper-wrap1 .product__text > a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.product-swiper-wrap1 .product__slide {
+  position: relative;
+  padding: 0 20px;
+}
+
+.product-swiper-wrap1 .swiper-slide {
+  margin-right: 46px;
+  width: 320px !important;
+  cursor: pointer;
+}
+
+.product-swiper-wrap1 .swiper-slide:nth-child(4n + 4) {
+  margin-right: 0;
+}
+
+.product-swiper-wrap1 .swiper-slide > img {
+  width: 100%;
+  height: 320px !important;
+  transition: opacity 0.5s;
+}
+
+.product-swiper-wrap1 .swiper-slide > .hover-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.product-swiper-wrap1 .swiper-slide:hover > .hover-img {
+  opacity: 1;
+}
+
+.product-swiper-wrap1 .swiper-slide:hover > .default-img {
+  opacity: 0;
+}
+
+.product-swiper-wrap1 .swiper-slide-btn {
+  position: absolute;
+  left: 6%;
+  top: 54%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.product-swiper-wrap1 .swiper-slide-btn > a {
+  width: 280px;
+  height: 45px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-swiper-wrap1 .swiper-slide:hover > .swiper-slide-btn {
+  opacity: 0.8;
+}
+
+.product-swiper-wrap1 .product__swiper-button-group {
+  position: absolute;
+  right: 50px;
+  top: -65px;
+}
+
+.product-swiper-wrap1
+  .product__swiper-button-group
+  > .product__swiper-button-prev {
+  left: -40px;
+}
+
+.product-swiper-wrap1
+  .product__swiper-button-group
+  > .product__swiper-button-next {
+  left: 10px;
+}
+
+.product-swiper-wrap1
+  .product__swiper-button-group
+  > .product__swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+}
+
+.product-swiper-wrap1
+  .product__swiper-button-group
+  > .product__swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+
+.product-swiper-wrap1
+  .product__swiper-button-group
+  > .product__swiper-button-prev::after {
+  content: "";
+}
+
+.product-swiper-wrap1
+  .product__swiper-button-group
+  > .product__swiper-button-next::after {
+  content: "";
+}
+
+.product-swiper-wrap1 .product__swiper-button-group > div {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.product-swiper-wrap1 .swiper-slide__text {
+  padding: 40px;
+  background-color: white;
+}
+
+.product-swiper-wrap1 .swiper-slide__text > .swiper-slide__name {
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.product-swiper-wrap1 .swiper-slide__text > .swiper-slide__name:hover {
+  text-decoration: underline;
+}
+
+.product-swiper-wrap1 .swiper-slide__text > .swiper-slide-price {
+  font-weight: bold;
+}
+/* 제품 스와이퍼1 구현 끝 */
+
+/* 제품 스와이퍼2 구현 시작 */
+.product-swiper-wrap2 .product__text2 {
+  margin: 25px 0;
+  padding-left: 20px;
+}
+
+.product-swiper-wrap2 .product__text > h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+/* 슬라이드 커스텀 */
+.product-swiper-wrap2 .product__slide2 {
+  position: relative;
+  padding: 0 36px;
+}
+
+.product-swiper-wrap2 .swiper-slide {
+  margin-right: 37px;
+  width: 320px !important;
+  cursor: pointer;
+}
+
+.product-swiper-wrap2 .swiper-slide:nth-child(4n + 4) {
+  margin-right: 0;
+}
+
+.product-swiper-wrap2 .swiper-slide > img {
+  width: 100%;
+  height: 320px !important;
+}
+
+/* 스와이퍼 버튼 커스텀 */
+.product-swiper-wrap2 .product__swiper-button-group2 {
+  position: absolute;
+  width: 100%;
+  top: 42%;
+}
+
+.product-swiper-wrap2
+  .product__swiper-button-group2
+  > .product__swiper-button-prev2 {
+  left: -3%;
+}
+
+.product-swiper-wrap2
+  .product__swiper-button-group2
+  > .product__swiper-button-next2 {
+  right: 2%;
+}
+
+.product-swiper-wrap2
+  .product__swiper-button-group2
+  > .product__swiper-button-prev2.swiper-button-disabled {
+  opacity: 1;
+}
+
+.product-swiper-wrap2
+  .product__swiper-button-group2
+  > .product__swiper-button-next2.swiper-button-disabled {
+  opacity: 1;
+}
+
+.product-swiper-wrap2
+  .product__swiper-button-group2
+  > .product__swiper-button-prev2::after {
+  content: "";
+}
+
+.product-swiper-wrap2
+  .product__swiper-button-group2
+  > .product__swiper-button-next2::after {
+  content: "";
+}
+
+.product-swiper-wrap2 .product__swiper-button-group2 > div {
+  color: black;
+  font-size: 30px;
+}
+
+/* 제품 이름, 가격표 */
+.product-swiper-wrap2 .product__slide2 .swiper-slide__text {
+  padding: 0;
+}
+
+.product-swiper-wrap2 .swiper-slide__text > .swiper-slide__name {
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.product-swiper-wrap2 .product__slide2 .swiper-slide:hover .swiper-slide__text {
+  text-decoration: underline;
+}
+
+.product-swiper-wrap2 .swiper-slide__text > .swiper-slide-price2 {
+  color: #756767;
+}
+/* 제품 스와이퍼2 구현 끝 */
+
+/* 베너 컨텐츠2 구현 시작 */
+.banner-content__text-wrap > h1 {
+  font-size: 46px;
+  font-weight: 900;
+  padding-bottom: 24px;
+}
+
+.banner-content__text-wrap > p {
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 43px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.button-wrap:hover {
+  background-color: white;
+  color: black;
+}
+
+.button-wrap2 {
+  display: inline-block;
+}
+
+.button-wrap2 > a {
+  display: block;
+  margin-top: 9px;
+}
+/* 베너 컨텐츠2 구현 끝 */
+
+/* 배너 컨텐츠3 구현 시작 */
+.bg-img {
+  position: relative;
+}
+
+.ctn-text {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+.bg-img1 .ctn-text {
+  color: #fae8ce;
+}
+
+.bg-img2 .ctn-text {
+  color: white;
+}
+
+.ctn-text > p {
+  font-size: 16px;
+}
+
+.ctn-text > h1 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.ctn-text a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ctn-text a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+/* 베너 컨텐츠 하단 */
+.ctn-bottom__bg-img {
+  position: relative;
+}
+
+.ctn-bottom__text {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  color: white;
+}
+
+.ctn-bottom__text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.ctn-bottom__text p {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.ctn-bottom__text > a {
+  font-size: 16px;
+}
+
+.ctn-bottom__text > a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+/* 배너 컨텐츠3 구현 끝 */
+
+/* 푸터 구현 시작 */
+/* 푸터 메뉴 바 */
+.footer__menu-bar {
+  color: white;
+}
+
+.menu-bar__top > ul li {
+  width: calc(100% / 4);
+  border-right: 1px solid #504849;
+  text-align: left;
+  padding: 45px 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-bar__top > ul > li:first-child {
+  border-left: 1px solid #504849;
+}
+
+.menu-bar__txt > h3 {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: auto;
+}
+
+.menu-bar__txt > span {
+  font-size: 14px;
+}
+
+.menu-bar__txt > span:hover {
+  color: #f5a019;
+}
+
+.menu-bar__ctn {
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+.menu-bar__ctn > span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu-bar__ctn1 > a {
+  width: 285px;
+  height: 50px;
+  background-color: #eb8102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.menu-bar__ctn1 > a:hover {
+  background-color: black;
+  color: white;
+}
+
+.menu-bar__ctn2 > .icon-box {
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.menu-bar__ctn2 > .icon-box > a {
+  margin-right: 25px;
+}
+
+.menu-bar__ctn2 > .icon-box > a:last-child {
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid white;
+  border-radius: 8px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+  margin-right: 0;
+}
+
+.menu-bar__ctn2 > .icon-box > a:hover > i {
+  background-color: white;
+  color: #362d2e;
+  border-radius: 5px;
+}
+
+.menu-bar__ctn2 > .icon-box > a:last-child:hover {
+  background-color: white;
+  color: #362d2e;
+}
+
+.menu-bar__ctn3 > p:nth-child(2) {
+  font-size: 30px;
+  font-weight: bold;
+  color: #eb8102;
+  margin-top: 25px;
+}
+
+.menu-bar__ctn3 > p:nth-child(3) {
+  font-size: 14px;
+}
+
+/* 푸터 하단 바 */
+.footer__bottom-bar {
+  color: #9b9b9b;
+  font-size: 12px;
+}
+
+.bottom-left-ctn > ul li {
+  border-left: 1px solid #433935;
+  padding: 0 6px 0 8px;
+}
+
+.bottom-left-ctn > ul li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.bottom-left-ctn > div:nth-child(4) > a:hover {
+  color: #e78f21;
+}
+/* 푸터 구현 끝 */
